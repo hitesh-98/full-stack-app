@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  <span><a mat-icon-button routerLink="/">Product Kart</a></span>
+  <span class="example-spacer"></span>
+  <a *ngIf="!isLoggedIn" class="margin" mat-icon-button routerLink="/login">Login</a>
+  <a *ngIf="!isLoggedIn" class="margin" mat-icon-button routerLink="/register">Register</a>
+  <a *ngIf="isLoggedIn" (click)="logoutUser()" mat-icon-button>Logout</a>
+</mat-toolbar>

@@ -1,0 +1,14 @@
+.example-spacer {
+  flex: auto;
+}
+
+.margin {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}
+
+.example-spacer a:hover {
+  color: yellow;
+  text-decoration: none;
+}
+

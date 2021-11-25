@@ -1,0 +1,62 @@
+<div class="bootstrap-wrapper">
+  <div class="container mt">
+    <div class="row">
+      <div class="auto-margin md-3">
+        <div class="container text-center">
+          <img
+            class="image-fluid"
+            style="width: 100px"
+            src="/assets/login.png"
+          />
+        </div>
+        <h2 class="text-center">Login Here!!</h2>
+
+        <form (ngSubmit)="onSubmit()" #loginform="ngForm">
+          <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input
+              [(ngModel)]="credentials.email"
+              required
+              type="email"
+              name="email"
+              matInput
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input
+              [(ngModel)]="credentials.password"
+              required
+              type="password"
+              name="password"
+              matInput
+            />
+          </mat-form-field>
+
+          <div class="container text-center">
+            <button
+              [disabled]="loginform.form.invalid"
+              mat-raised-button
+              color="primary"
+              type="submit"
+            >
+              Login
+            </button>
+            <button
+              mat-raised-button
+              color="accent"
+              type="reset"
+              style="margin-left: 20px"
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+
+        <br />
+        <a routerLink="/register">New User? Click to Register!!</a>
+      </div>
+    </div>
+  </div>
+</div>

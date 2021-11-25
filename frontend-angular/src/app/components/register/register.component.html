@@ -1,0 +1,93 @@
+<div class="bootstrap-wrapper">
+  <div class="container mt">
+    <div class="row auto">
+      <div class="auto-margin md-3">
+        <div class="container text-center">
+          <img
+            class="image-fluid"
+            style="width: 100px"
+            src="/assets/register.png"
+          />
+        </div>
+        <h2 class="text-center">Register Here!!</h2>
+
+        <form (ngSubmit)="onSubmit()" #registerform="ngForm">
+          <mat-form-field class="full-width">
+            <mat-label>First Name</mat-label>
+            <input
+              [(ngModel)]="credentials.firstName"
+              required
+              type="text"
+              name="firstName"
+              matInput
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Last Name</mat-label>
+            <input
+              [(ngModel)]="credentials.lastName"
+              required
+              type="text"
+              name="lastName"
+              matInput
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input
+              [(ngModel)]="credentials.email"
+              required
+              type="email"
+              name="email"
+              matInput
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input
+              [(ngModel)]="credentials.password"
+              required
+              type="password"
+              name="password"
+              matInput
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Confirm Password</mat-label>
+            <input
+              (ngModel)="credentials.password"
+              required
+              type="password"
+              name="confirmPassword"
+              matInput
+            />
+          </mat-form-field>
+
+          <div class="container text-center">
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              [disabled]="registerform.form.invalid"
+            >
+              Register
+            </button>
+            <button
+              mat-raised-button
+              color="accent"
+              type="reset"
+              style="margin-left: 20px"
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

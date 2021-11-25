@@ -1,0 +1,43 @@
+<!-- <div class="bootstrap-wrapper">
+  <div class="container text-center mt">
+    <h1>Welcome</h1>
+    <button (click)="getResults()" mat-raised-button color="primary">Get Results</button>
+  </div>
+</div> -->
+
+<div class="form-group container mt">
+  <input type="text" placeholder="search products" class="form-control">
+</div>
+<!-- <span class="fas fa-search search-icon"></span> -->
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let product of productlist">
+      <div class="card col-md-3">
+        <img src="{{ product.image }}" alt="" />
+        <h5
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100ch;
+          "
+        >
+          {{ product.name }}
+        </h5>
+        <p
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100ch;
+          "
+        >
+          {{ product.description }}
+        </p>
+        <p><strong>Price:</strong>&#x20B9;{{product.price}}</p>
+        <button class="btn btn-primary">View Product</button>
+      </div>
+    </ng-container>
+  </div>
+</div>
